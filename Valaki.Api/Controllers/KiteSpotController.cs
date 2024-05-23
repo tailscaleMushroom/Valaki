@@ -42,6 +42,14 @@ public class KiteSpotController : ControllerBase
     }
 
     [HttpGet]
+    [Route("GetById")]
+    public async Task<ActionResult<GetKiteSpotResponse>> Get([FromQuery] GetKiteSpotRequest request, CancellationToken cancellationToken)
+    {
+        var response = await _mediator.Send(request, cancellationToken);
+        return Ok(response);
+    }
+
+    [HttpGet]
     public async Task<ActionResult<GetAllKiteSpotResponse>> GetAll(CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(new GetAllKiteSpotRequest(), cancellationToken);
