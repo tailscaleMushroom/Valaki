@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Valaki.Application.Features.KiteSpotFeatures.CreateKiteSpot;
+using Valaki.Application.Features.KiteSpotFeatures.GetAllKiteSpot;
 using Valaki.Application.Features.KiteSpotFeatures.GetKiteSpot;
 
 namespace Valaki.Api.Controllers;
@@ -25,9 +26,17 @@ public class KiteSpotController : ControllerBase
     }
 
     [HttpGet]
+    [Route("GetByName")]
     public async Task<ActionResult<GetKiteSpotResponse>> GetByName([FromQuery]GetKiteSpotRequest request, CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(request, cancellationToken);
+        return Ok(response);
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<GetAllKiteSpotResponse>> GetAll(CancellationToken cancellationToken)
+    {
+        var response = await _mediator.Send(new GetAllKiteSpotRequest(), cancellationToken);
         return Ok(response);
     }
 }

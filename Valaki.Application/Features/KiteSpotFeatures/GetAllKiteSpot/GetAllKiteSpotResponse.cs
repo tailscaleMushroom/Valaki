@@ -8,7 +8,7 @@ namespace Valaki.Application.Features.KiteSpotFeatures.GetAllKiteSpot;
 
 public sealed class GetAllKiteSpotResponse
 {
-    public string Guid { get; set; }
+    public Guid Id { get; set; }
     public string Name { get; set; }
     public string Email { get; set; }
 }
