@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valaki.Domain", "Valaki.Domain\Valaki.Domain.csproj", "{24203F7C-503F-471D-AEA2-207AAA912549}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valaki.Domain", "Valaki.Domain\Valaki.Domain.csproj", "{24203F7C-503F-471D-AEA2-207AAA912549}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valaki.Application", "Valaki.Application\Valaki.Application.csproj", "{D0A2F4C6-1FC7-4423-B586-A88DE9110338}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valaki.Application", "Valaki.Application\Valaki.Application.csproj", "{D0A2F4C6-1FC7-4423-B586-A88DE9110338}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valaki.Persistence", "Valaki.Persistence\Valaki.Persistence.csproj", "{F1D52BB0-AAD0-420C-8B2C-4F63299A8E19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D0A2F4C6-1FC7-4423-B586-A88DE9110338}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0A2F4C6-1FC7-4423-B586-A88DE9110338}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0A2F4C6-1FC7-4423-B586-A88DE9110338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1D52BB0-AAD0-420C-8B2C-4F63299A8E19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D52BB0-AAD0-420C-8B2C-4F63299A8E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D52BB0-AAD0-420C-8B2C-4F63299A8E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D52BB0-AAD0-420C-8B2C-4F63299A8E19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
