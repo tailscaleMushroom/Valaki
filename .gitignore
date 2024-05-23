@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Valaki.Persistence/Migrations/20240523090903_firstmigration.cs
+/Valaki.Persistence/Migrations/DataContextModelSnapshot.cs
+/Valaki.Persistence/Migrations/20240523090903_firstmigration.Designer.cs
