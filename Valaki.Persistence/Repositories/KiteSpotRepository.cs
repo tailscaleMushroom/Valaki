@@ -20,5 +20,10 @@ namespace Valaki.Persistence.Repositories
         {
             return Context.KiteSpots.FirstOrDefaultAsync(x => x.Email == email, cancellationToken);
         }
+
+        public Task<KiteSpot> GetByName(string name, CancellationToken cancellationToken)
+        {
+            return Context.KiteSpots.FirstOrDefaultAsync(x => x.Email == name, cancellationToken);
+        }
     }
 }
