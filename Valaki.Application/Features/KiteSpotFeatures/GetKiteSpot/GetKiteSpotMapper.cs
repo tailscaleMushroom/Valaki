@@ -7,7 +7,7 @@ public sealed class GetKiteSpotMapper : Profile
 {
     public GetKiteSpotMapper()
     {
-        CreateMap<KiteSpot, GetKiteSpotResponse>();
+        CreateMap<KiteSpot, KiteSpotResponse>();
     }
 }
 

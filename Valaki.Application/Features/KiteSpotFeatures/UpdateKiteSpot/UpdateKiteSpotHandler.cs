@@ -5,7 +5,7 @@ using Valaki.Domain.Entities;
 
 namespace Valaki.Application.Features.KiteSpotFeatures.UpdateKiteSpot;
 
-public sealed class UpdateKiteSpotHandler : IRequestHandler<UpdateKiteSpotRequest, UpdateKiteSpotResponse>
+public sealed class UpdateKiteSpotHandler : IRequestHandler<UpdateKiteSpotRequest, KiteSpotResponse>
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IKiteSpotRepository _kiteSpotRepository;
@@ -18,12 +18,12 @@ public sealed class UpdateKiteSpotHandler : IRequestHandler<UpdateKiteSpotReques
         _mapper = mapper;
     }
 
-    public async Task<UpdateKiteSpotResponse> Handle(UpdateKiteSpotRequest request, CancellationToken cancellationToken)
+    public async Task<KiteSpotResponse> Handle(UpdateKiteSpotRequest request, CancellationToken cancellationToken)
     {
         var kiteSpot = _mapper.Map<KiteSpot>(request);
         _kiteSpotRepository.Update(kiteSpot);
         await _unitOfWork.Save(cancellationToken);
 
-        return _mapper.Map<UpdateKiteSpotResponse>(kiteSpot);
+        return _mapper.Map<KiteSpotResponse>(kiteSpot);
     }
 }

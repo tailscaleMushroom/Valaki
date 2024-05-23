@@ -10,7 +10,7 @@ using Valaki.Domain.Entities;
 
 namespace Valaki.Application.Features.KiteSpotFeatures.CreateKiteSpot
 {
-    public sealed class CreateKiteSpotHandler : IRequestHandler<CreateKiteSpotRequest, CreateKiteSpotResponse>
+    public sealed class CreateKiteSpotHandler : IRequestHandler<CreateKiteSpotRequest, KiteSpotResponse>
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IKiteSpotRepository _kiteSpotRepository;
@@ -23,13 +23,13 @@ namespace Valaki.Application.Features.KiteSpotFeatures.CreateKiteSpot
             _mapper = mapper;
         }
 
-        public async Task<CreateKiteSpotResponse> Handle(CreateKiteSpotRequest request, CancellationToken cancellationToken)
+        public async Task<KiteSpotResponse> Handle(CreateKiteSpotRequest request, CancellationToken cancellationToken)
         {
             var kiteSpot = _mapper.Map<KiteSpot>(request);
             _kiteSpotRepository.Create(kiteSpot);
             await _unitOfWork.Save(cancellationToken);
 
-            return _mapper.Map<CreateKiteSpotResponse>(kiteSpot);
+            return _mapper.Map<KiteSpotResponse>(kiteSpot);
         }
     }
 }

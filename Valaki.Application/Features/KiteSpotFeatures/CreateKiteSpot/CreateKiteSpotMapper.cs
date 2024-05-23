@@ -9,7 +9,7 @@ namespace Valaki.Application.Features.KiteSpotFeatures.CreateKiteSpot
         public CreateKiteSpotMapper() 
         {
             CreateMap<CreateKiteSpotRequest, KiteSpot>();
-            CreateMap<KiteSpot, CreateKiteSpotResponse>();
+            CreateMap<KiteSpot, KiteSpotResponse>();
         }
     }
 }

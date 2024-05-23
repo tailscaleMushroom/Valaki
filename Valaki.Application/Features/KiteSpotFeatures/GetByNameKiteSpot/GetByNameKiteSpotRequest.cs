@@ -1,7 +1,7 @@
 ﻿using MediatR;
 
-namespace Valaki.Application.Features.KiteSpotFeatures.GetKiteSpot;
+namespace Valaki.Application.Features.KiteSpotFeatures.GetByNameKiteSpot;
 
-public sealed record GetByNameKiteSpotRequest(string Name) : IRequest<GetByNameKiteSpotResponse>;
+public sealed record GetByNameKiteSpotRequest(string Name) : IRequest<KiteSpotResponse>;
 
 

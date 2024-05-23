@@ -10,7 +10,7 @@ using Valaki.Application.Repositories;
 
 namespace Valaki.Application.Features.KiteSpotFeatures.GetAllKiteSpot;
 
-public sealed class GetAllKiteSpotHandler : IRequestHandler<GetAllKiteSpotRequest, List<GetAllKiteSpotResponse>>
+public sealed class GetAllKiteSpotHandler : IRequestHandler<GetAllKiteSpotRequest, List<KiteSpotResponse>>
 {
     private readonly IKiteSpotRepository _kiteSpotRepository;
     private readonly IMapper _mapper;
@@ -21,10 +21,10 @@ public sealed class GetAllKiteSpotHandler : IRequestHandler<GetAllKiteSpotReques
         _kiteSpotRepository = kiteSpotRepository;
     }
 
-    public async Task<List<GetAllKiteSpotResponse>> Handle(GetAllKiteSpotRequest request, CancellationToken cancellationToken)
+    public async Task<List<KiteSpotResponse>> Handle(GetAllKiteSpotRequest request, CancellationToken cancellationToken)
     {
         var kiteSpots = await _kiteSpotRepository.GetAll(cancellationToken);
-        return _mapper.Map<List<GetAllKiteSpotResponse>>(kiteSpots);
+        return _mapper.Map<List<KiteSpotResponse>>(kiteSpots);
     }
 }
 

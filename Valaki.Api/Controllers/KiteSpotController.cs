@@ -1,8 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata;
+using Valaki.Application.Features.KiteSpotFeatures;
 using Valaki.Application.Features.KiteSpotFeatures.CreateKiteSpot;
 using Valaki.Application.Features.KiteSpotFeatures.GetAllKiteSpot;
+using Valaki.Application.Features.KiteSpotFeatures.GetByNameKiteSpot;
 using Valaki.Application.Features.KiteSpotFeatures.GetKiteSpot;
 using Valaki.Application.Features.KiteSpotFeatures.UpdateKiteSpot;
 
@@ -20,14 +21,14 @@ public class KiteSpotController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<CreateKiteSpotResponse>> Create(CreateKiteSpotRequest request, CancellationToken cancellationToken)
+    public async Task<ActionResult<KiteSpotResponse>> Create(CreateKiteSpotRequest request, CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(request, cancellationToken);
         return Ok(response);
     }
 
     [HttpPut]
-    public async Task<ActionResult<UpdateKiteSpotResponse>> Update(UpdateKiteSpotRequest request, CancellationToken cancellationToken)
+    public async Task<ActionResult<KiteSpotResponse>> Update(UpdateKiteSpotRequest request, CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(request, cancellationToken);
         return Ok(response);
@@ -35,7 +36,7 @@ public class KiteSpotController : ControllerBase
 
     [HttpGet]
     [Route("GetByName")]
-    public async Task<ActionResult<GetByNameKiteSpotResponse>> GetByName([FromQuery]GetByNameKiteSpotRequest request, CancellationToken cancellationToken)
+    public async Task<ActionResult<KiteSpotResponse>> GetByName([FromQuery]GetByNameKiteSpotRequest request, CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(request, cancellationToken);
         return Ok(response);
@@ -43,14 +44,14 @@ public class KiteSpotController : ControllerBase
 
     [HttpGet]
     [Route("GetById")]
-    public async Task<ActionResult<GetKiteSpotResponse>> Get([FromQuery] GetKiteSpotRequest request, CancellationToken cancellationToken)
+    public async Task<ActionResult<KiteSpotResponse>> Get([FromQuery] GetKiteSpotRequest request, CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(request, cancellationToken);
         return Ok(response);
     }
 
     [HttpGet]
-    public async Task<ActionResult<GetAllKiteSpotResponse>> GetAll(CancellationToken cancellationToken)
+    public async Task<ActionResult<KiteSpotResponse>> GetAll(CancellationToken cancellationToken)
     {
         var response = await _mediator.Send(new GetAllKiteSpotRequest(), cancellationToken);
         return Ok(response);

@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 
 namespace Valaki.Application.Features.KiteSpotFeatures.GetAllKiteSpot;
 
-public sealed record GetAllKiteSpotRequest : IRequest<List<GetAllKiteSpotResponse>>;
+public sealed record GetAllKiteSpotRequest : IRequest<List<KiteSpotResponse>>;
 

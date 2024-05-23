@@ -2,9 +2,9 @@
 using MediatR;
 using Valaki.Application.Repositories;
 
-namespace Valaki.Application.Features.KiteSpotFeatures.GetKiteSpot;
+namespace Valaki.Application.Features.KiteSpotFeatures.GetByNameKiteSpot;
 
-public sealed class GetByNameKiteSpotHandler : IRequestHandler<GetByNameKiteSpotRequest, GetByNameKiteSpotResponse>
+public sealed class GetByNameKiteSpotHandler : IRequestHandler<GetByNameKiteSpotRequest, KiteSpotResponse>
 {
     private readonly IKiteSpotRepository _kiteSpotRepository;
     private readonly IMapper _mapper;
@@ -15,10 +15,10 @@ public sealed class GetByNameKiteSpotHandler : IRequestHandler<GetByNameKiteSpot
         _mapper = mapper;
     }
 
-    public async Task<GetByNameKiteSpotResponse> Handle(GetByNameKiteSpotRequest request, CancellationToken cancellationToken)
+    public async Task<KiteSpotResponse> Handle(GetByNameKiteSpotRequest request, CancellationToken cancellationToken)
     {
         var kiteSpot = await _kiteSpotRepository.GetByName(request.Name, cancellationToken);
-        return _mapper.Map<GetByNameKiteSpotResponse>(kiteSpot);
+        return _mapper.Map<KiteSpotResponse>(kiteSpot);
     }
 }
 

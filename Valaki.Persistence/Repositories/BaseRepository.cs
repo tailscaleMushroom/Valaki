@@ -17,11 +17,13 @@ namespace Valaki.Persistence.Repositories
 
         public void Create(T entity)
         {
+            entity.DateCreated = DateTimeOffset.UtcNow;
             Context.Add(entity);
         }
 
         public void Update(T entity)
         {
+            entity.DateUpdated = DateTimeOffset.UtcNow;
             Context.Update(entity);
         }
 

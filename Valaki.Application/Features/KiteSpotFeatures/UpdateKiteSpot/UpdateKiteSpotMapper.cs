@@ -9,7 +9,7 @@ public sealed class UpdateKiteSpotMapper : Profile
     public UpdateKiteSpotMapper() 
     {
         CreateMap<UpdateKiteSpotRequest, KiteSpot>();
-        CreateMap<KiteSpot, UpdateKiteSpotResponse>();
+        CreateMap<KiteSpot, KiteSpotResponse>();
     }
 }
 
