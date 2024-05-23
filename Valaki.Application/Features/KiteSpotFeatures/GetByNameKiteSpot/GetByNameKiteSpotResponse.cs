@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Valaki.Application.Features.KiteSpotFeatures.GetKiteSpot
 {
-    public sealed record GetKiteSpotResponse
+    public sealed record GetByNameKiteSpotResponse
     {
         public Guid Id { get; set; }
         public string Email { get; set; }
