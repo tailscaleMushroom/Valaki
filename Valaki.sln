@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valaki.Domain", "Valaki.Dom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valaki.Application", "Valaki.Application\Valaki.Application.csproj", "{D0A2F4C6-1FC7-4423-B586-A88DE9110338}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valaki.Persistence", "Valaki.Persistence\Valaki.Persistence.csproj", "{F1D52BB0-AAD0-420C-8B2C-4F63299A8E19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valaki.Persistence", "Valaki.Persistence\Valaki.Persistence.csproj", "{F1D52BB0-AAD0-420C-8B2C-4F63299A8E19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valaki.Api", "Valaki.Api\Valaki.Api.csproj", "{7C063F59-57ED-4707-9B9D-F6A0E111CF1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valaki.Api", "Valaki.Api\Valaki.Api.csproj", "{7C063F59-57ED-4707-9B9D-F6A0E111CF1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valaki.Test", "Valaki.Test\Valaki.Test.csproj", "{E9286B92-5B7C-45D8-81A2-F67AB9EB0C36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7C063F59-57ED-4707-9B9D-F6A0E111CF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C063F59-57ED-4707-9B9D-F6A0E111CF1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C063F59-57ED-4707-9B9D-F6A0E111CF1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9286B92-5B7C-45D8-81A2-F67AB9EB0C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9286B92-5B7C-45D8-81A2-F67AB9EB0C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9286B92-5B7C-45D8-81A2-F67AB9EB0C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9286B92-5B7C-45D8-81A2-F67AB9EB0C36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
