@@ -364,3 +364,6 @@ FodyWeavers.xsd
 /Valaki.Persistence/Migrations/20240523090903_firstmigration.cs
 /Valaki.Persistence/Migrations/DataContextModelSnapshot.cs
 /Valaki.Persistence/Migrations/20240523090903_firstmigration.Designer.cs
+/Valaki.Api/valaki.db
+/Valaki.Api/valaki.db-shm
+/Valaki.Api/valaki.db-wal
