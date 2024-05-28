@@ -11,8 +11,8 @@ namespace Valaki.Persistence
     {
         public static void ConfigurePersistence(this IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = configuration.GetConnectionString("Sqlite");
-            services.AddDbContext<DataContext>(opt => opt.UseSqlite(connectionString));
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<DataContext>(opt => opt.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IKiteSpotRepository, KiteSpotRepository>();

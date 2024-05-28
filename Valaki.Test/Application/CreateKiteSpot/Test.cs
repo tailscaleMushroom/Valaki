@@ -4,11 +4,11 @@ using Valaki.Domain.Entities;
 
 namespace Valaki.Test.Application.CreateKiteSpot;
 
-public class CreateKiteSpotValidatorTest : IClassFixture<ValakiApiFactory>
+public class Test : IClassFixture<ValakiApiFactory>
 {
     ValakiApiFactory factory;
 
-    public CreateKiteSpotValidatorTest(ValakiApiFactory fixture)
+    public Test(ValakiApiFactory fixture)
     {
         factory = fixture;
     }
